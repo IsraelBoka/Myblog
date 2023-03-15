@@ -1,5 +1,16 @@
 ## MYBLOG
 
+### installation
+
+```bash
+
+php artisan migrate
+npm install
+npm run dev
+php artisan serve --port=8000
+
+```
+
 ### Un blog utilisant laravel breeze
 
 pour utiliser tailwind css sur une page il faut utiliser ce code :
