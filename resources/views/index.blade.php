@@ -67,7 +67,7 @@
 
     <div class="grid  relative   lg:grid-cols-2  mx-auto max-w-6xl px-4 lg:px-8 mt-12">
         <div class="">
-            <img src="/image1.jpg" alt="image1" class="rounded-md z-10">
+            <img src="/images/image1.jpg" alt="image1" class="rounded-md z-10">
         </div>
         <div class="font-bold relative text-center flex gap-4 flex-col items-center justify-center">
             <div class=" absolute animate-blob   filter  -top-20 -right-4 opacity-70 blur-xl   h-72 w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
@@ -120,7 +120,7 @@
 
 <div class="  z-10 bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="/images/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
@@ -142,7 +142,7 @@
 
 <div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="/images/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
@@ -165,7 +165,7 @@
 
 <div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="/images/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
@@ -187,7 +187,7 @@
 
 <div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="/images/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
@@ -209,7 +209,7 @@
 
 <div class = " z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="/images/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
