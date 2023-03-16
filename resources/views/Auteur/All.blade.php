@@ -24,4 +24,3 @@
     
 
 </x-app-layout>
-cedric djire
