@@ -15,9 +15,10 @@
 
     <nav class="mx-auto max-w-6xl px-4 lg:px-8 mt-4">
         <ul class=" flex items-center  text-xl gap-5 font-medium ">
-            <li class="cursor-pointer">Orientation.com</li>
-            <div class="py-0.5 px-0.5 rounded-full mx-auto border-2 border-black bg-white flex gap-5 [&>li]:transition-colors [&>li]:duration-300 [&>li]:cursor-pointer [&>li]:rounded-full [&>li]:p-2 hover:[&>li]:bg-black  hover:[&>li]:text-white">
-                <li>Passer un test </li>
+            <li class="cursor-pointer flex-1 lg:flex-none">Orientation.com</li>
+                
+            <div class="hidden [&>li]:uppercase  py-0.5 px-0.5 rounded-full mx-auto border-2 border-[#292929] bg-white lg:flex gap-5 [&>li]:transition-colors [&>li]:cursor-pointer [&>li]:rounded-full [&>li]:p-2 hover:[&>li]:bg-[#292929]  hover:[&>li]:text-white">
+                <li class="animate-backgroundslide">Passer un test </li>
                 <li>
                     A propos 
                 </li>
@@ -25,59 +26,73 @@
                     Contact
                 </li>
             </div>
-            @if (Route::has('login'))
+            
+            <div class="hidden lg:flex">
+                    
+                @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
                 @else
-                    <a href="{{ route('login') }}" class="bg-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ">Se connecter </a>
-
+                    <a href="{{ route('login') }}" class="bg-[#292929] text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ">Se connecter </a>
+    
                 @endauth
         @endif
+                    </div>
+
+                    <button class="lg:hidden">
+                        
+                    <svg  class="w-6 h-6 stroke-[#292929] " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>
+                    </button>
+                      
         </ul>
     </nav>
 
     <!-- Div annonce  -->
-
+<!--
     <div class="flex items-center justify-center mt-6 ">
         <div class="relative">
             
-        {{-- <div class="absolute bg-gradient-to-r from-pink-500 to-blue-500 blur rounded-full inset-0 "></div> --}}
-        <a class=" duration-200 transition-transform relative cursor-pointer rounded-full px-2 py-0.5 font-medium bg-[#e5e5e5]  text-black ">
+        <div class="absolute bg-gradient-to-r from-purple-500 to-yellow-500 blur rounded-full inset-0 "></div>
+        <a class=" duration-200 transition-transform relative cursor-pointer rounded-full px-2 py-0.5 font-medium bg-[#f2f2f2] border border-[#292929]  text-[#292929] ">
             Conférence sur l'orientation scolaire ce samedi 12/12/2020
         </a>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Body index page  -->
 
 
-    <div class="grid lg:grid-cols-2  mx-auto max-w-6xl px-4 lg:px-8 mt-12">
+    <div class="grid  relative   lg:grid-cols-2  mx-auto max-w-6xl px-4 lg:px-8 mt-12">
         <div class="">
-            <img src="/image1.jpg" alt="image1" class="rounded-md">
+            <img src="/image1.jpg" alt="image1" class="rounded-md z-10">
         </div>
-        <div class="font-bold text-center flex gap-4 flex-col">
-            <h1 class="text-xl ">
+        <div class="font-bold relative text-center flex gap-4 flex-col items-center justify-center">
+            <div class=" absolute animate-blob   filter  -top-20 -right-4 opacity-70 blur-xl   h-72 w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+            <div class=" absolute  top-0 animate-blob filter bottom-16  opacity-70 left-16 blur-xl   h-72 w-72 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <h1 class="text-xl z-10 ">
                 Passer un test pour votre enfant ?
             </h1>
-            <h2 class="text-md font-medium ">
+            <h2 class="text-md font-medium z-10">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.<br class="hidden md:block" /> Quisquam, quod.
             </h2>
-            <div class="hover:scale-105 duration-150 transition-transform">
-                <a href="/test" class="bg-white border-2 text-xl   border-black rounded-3xl p-2 ">Passer un test </a>
+            <div class="hover:scale-105 duration-150 transition-transform z-10">
+                <a href="/test" class="bg-white border-2 text-xl   border-[#292929] rounded-3xl p-2 ">Passer un test </a>
 
             </div>
-        </div>
+        </div> 
 
     </div>
 
     <!-- Section Blogs -->
 
     <div class=" mx-auto max-w-6xl px-4 lg:px-8 mt-12">
-        <div class="flex items-end gap-10  ">
+        <div class="flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-10  ">
             
         <h1 class="text-5xl  font-bold ">Blog </h1>
-        <div class="text-xl font-medium  ">
+        <div class="md:text-xl text-sm font-medium  ">
             Apprenez à mieux connaitre votre enfant et à l'aider dans son orientation scolaire
         </div>
         </div>
@@ -85,26 +100,31 @@
         <!-- Trier les articles  -->
 
         <div class="flex gap-2 mt-5">
-            <button class="p-2 bg-black text-white rounded-full ">Toutes</button>
-            <button class="p-2  border-dashed border-black transition-all  rounded-3xl border-2 hover:rounded-xl">Scolaire</button>
-            <button class="p-2  border-dashed border-black transition-all  rounded-3xl border-2 hover:rounded-xl">Catégorie 3</button>
-            <button class="p-2  border-dashed border-black  transition-all rounded-3xl border-2 hover:rounded-xl">Catégorie 4</button>
+            <button class="p-2 z-10 text-sm lg:text-base bg-[#292929] text-white rounded-full ">Toutes</button>
+            <button class="p-2 z-10  text-sm lg:text-base border-dashed border-[#292929] transition-all  rounded-3xl border-2 hover:rounded-xl">Scolaire</button>
+            <button class="p-2 z-10  text-sm lg:text-base border-dashed border-[#292929] transition-all  rounded-3xl border-2 hover:rounded-xl">Catégorie 3</button>
+            <button class="p-2 z-10  text-sm lg:text-base border-dashed border-[#292929]  transition-all rounded-3xl border-2 hover:rounded-xl">Catégorie 4</button>
         </div>
 
 
         <!-- les articles -->
         <div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 relative lg:grid-cols-3 gap-5 mt-10">                
+            <div class="absolute hidden lg:block    animate-blob   filter -top-16 right-36   opacity-70 blur-xl  h-60 w-60 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute hidden lg:block animate-blob   filter  -top-16 left-36 opacity-70 blur-xl  h-60 w-60 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute  hidden lg:block animate-blob   filter  top-0 right-8 opacity-70 blur-xl  h-20 w-20 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute  hidden lg:block animate-blob   filter  top-0 left-4 opacity-70 blur-xl  h-20 w-20 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+
    <!-- foreach pour les articles -->
 
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<div class="  z-10 bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
     <img src="/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
     <div class="flex gap-2 justify-end mt-2 ">
@@ -120,13 +140,13 @@
     </div>
 </div>
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
     <img src="/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
     <div class="flex gap-2 justify-end mt-2 ">
@@ -143,13 +163,13 @@
 </div>
 
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
     <img src="/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
     <div class="flex gap-2 justify-end mt-2 ">
@@ -165,13 +185,13 @@
     </div>
 </div>
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<div class=" z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
     <img src="/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
     <div class="flex gap-2 justify-end mt-2 ">
@@ -187,13 +207,13 @@
     </div>
 </div>
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<div class = " z-10  bg-white rounded-2xl py-4 px-1 border-2 border-[#292929]">
         
     <img src="/image1.jpg" class="rounded-2xl " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
         Mardi , 25 Novembre 2020 . 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
     <div class="flex gap-2 justify-end mt-2 ">
@@ -235,20 +255,20 @@
 
             </div>
             <div class="text-[#747675] text-base font-medium w-1/2 flex flex-col gap-5 justify-center items-center">
-                <p class="hover:text-white  transition-colors duration-150">
+                <p class="hover:text-white  transition-colors duration-150 text-sm lg:text-base">
                     Notre but est de vous aider à trouver votre voie et à vous <br class="hidden md:block " /> accompagner  dans votre projet d'orientation.
 
                 </p>
                 
             <ul class="flex gap-2 justify-center [&>li]:underline">
                 <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">Accueil</a>
+                    <a href="" class="text-[#747675] text-sm lg:text-base font-medium hover:text-white transition-colors duration-150">Accueil</a>
                 </li>
                 <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">A propos</a>
+                    <a href="" class="text-[#747675] text-sm lg:text-base font-medium hover:text-white transition-colors duration-150">A propos</a>
                 </li>
                 <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">Contact</a>
+                    <a href="" class="text-[#747675] text-sm lg:text-base font-medium hover:text-white transition-colors duration-150">Contact</a>
                 </li>
             </ul>
 
