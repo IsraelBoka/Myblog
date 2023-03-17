@@ -13,12 +13,14 @@
     
         <!-- Navbar -->
 
-    <nav class="mx-auto max-w-6xl px-4 lg:px-8 mt-4">
-        <ul class=" flex items-center  text-xl gap-5 font-medium ">
-            <li class="cursor-pointer flex-1 lg:flex-none">Orientation.com</li>
+    <nav class="mx-auto max-w-6xl px-4 lg:px-8 mt-4"  x-data="{ open: false }">
+        <ul class=" flex items-center justify-between lg:justify-start text-xl gap-5 font-medium ">
+            <div class="">
+                <li class="cursor-pointer">Orientation.com</li>
+            </div>
                 
-            <div class="hidden [&>li]:uppercase  py-0.5 px-0.5 rounded-full mx-auto border-2 border-[#292929] bg-white lg:flex gap-5 [&>li]:transition-colors [&>li]:cursor-pointer [&>li]:rounded-full [&>li]:p-2 hover:[&>li]:bg-[#292929]  hover:[&>li]:text-white">
-                <li class="animate-backgroundslide">Passer un test </li>
+            <div class="hidden [&>li]:uppercase py-0.5 px-0.5 rounded-full mx-auto border-2 border-[#292929] bg-white lg:flex gap-5 [&>li]:transition-all  [&>li]:duration-300  [&>li]:cursor-pointer [&>li]:rounded-full [&>li]:p-2 hover:[&>li]:bg-[#292929]  hover:[&>li]:text-white">
+                <li class="">Passer un test </li>
                 <li>
                     A propos 
                 </li>
@@ -38,15 +40,28 @@
                 @endauth
         @endif
                     </div>
+                    
+            <div class="-mr-2 flex items-center lg:hidden">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-black   focus:outline-none  transition duration-150 ease-in-out">
+                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'scale-75 opacity-0 ': open, 'opacity-100 scale-100': ! open }" class="inline-flex transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path :class="{'opacity-0': ! open, 'opacity-100': open }" class="opacity-0 inline-flex transition-opacity duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
-                    <button class="lg:hidden">
-                        
-                    <svg  class="w-6 h-6 stroke-[#292929] " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                      </svg>
-                    </button>
+   
                       
         </ul>
+        
+        <div :class="{'block': open, 'hidden': ! open}" class="lg:hidden block">
+            <div class=" ">
+                <a href="#" class="font-medium block px-4 py-2 text-base text-black hover:bg-black hover:text-white transition-colors duration-150 rounded">Passer un test</a>
+                <a href="#" class="font-medium block px-4 py-2 text-base text-black hover:bg-black hover:text-white transition-colors duration-150 rounded">A propos</a>
+                <a href="#" class="font-medium block px-4 py-2 text-base text-black hover:bg-black hover:text-white transition-colors duration-150 rounded">Contact</a>
+            </div>
+        </div>
+
     </nav>
 
     <!-- Div annonce  -->
@@ -70,8 +85,8 @@
             <img src="/images/image1.jpg" alt="image1" class="rounded-md z-10">
         </div>
         <div class="font-bold relative text-center flex gap-4 flex-col items-center justify-center">
-            <div class=" absolute animate-blob   filter  -top-20 -right-4 opacity-70 blur-xl   h-72 w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
-            <div class=" absolute  top-0 animate-blob filter bottom-16  opacity-70 left-16 blur-xl   h-72 w-72 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <div class=" absolute animate-blob   filter  -top-20 -right-4 opacity-70 blur-xl h-40 w-40  lg:h-72 lg:w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+            <div class=" absolute  top-0 animate-blob filter bottom-16  opacity-70 left-16 blur-xl  h-40 w-40   lg:h-72 lg:w-72 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
             <h1 class="text-xl z-10 ">
                 Passer un test pour votre enfant ?
             </h1>
@@ -99,7 +114,7 @@
 
         <!-- Trier les articles  -->
 
-        <div class="flex gap-2 mt-5">
+        <div class="flex flex-wrap gap-2 mt-5">
             <button class="p-2 z-10 text-sm lg:text-base bg-[#292929] text-white rounded-full ">Toutes</button>
             <button class="p-2 z-10  text-sm lg:text-base border-dashed border-[#292929] transition-all  rounded-3xl border-2 hover:rounded-xl">Scolaire</button>
             <button class="p-2 z-10  text-sm lg:text-base border-dashed border-[#292929] transition-all  rounded-3xl border-2 hover:rounded-xl">Catégorie 3</button>
@@ -127,7 +142,7 @@
     <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
@@ -149,7 +164,7 @@
     <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
@@ -172,7 +187,7 @@
     <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
@@ -194,7 +209,7 @@
     <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
@@ -216,7 +231,7 @@
     <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
@@ -238,6 +253,8 @@
     <!-- footer --> 
 
     <div class=" mx-auto max-w-6xl px-4 lg:px-8 mt-12 mb-4">
+        <!-- 
+        
         <div class=" bg-black rounded-md text-white p-2 flex items-center justify-between ">
             <div>
                 
@@ -275,7 +292,7 @@
             </div>
 
 
-        </div>
+        </div>-->
     </div>
 
 
