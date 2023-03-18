@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $images = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg'
+    ];
+    return view('index', ['images' => $images]);
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+
+Route::get('/blog1', function () {
+    return view("blog1");
+});
+
+
+Route::get('/users', UserController::class)->name("users");
+
 
 require __DIR__.'/auth.php';

@@ -13,6 +13,10 @@ module.exports = {
             fontFamily: {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                "brand-black": "#292929",
+                "brand-gray": "#6a6f7a",
+            },
             keyframes: {
                 blob: {
                     "0%": {
