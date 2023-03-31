@@ -20,7 +20,7 @@
 
             <!-- Page Heading -->
             <header class="">
-                <div class="">
+                <div class="ml-4">
                     {{ $header }}
                 </div>
             </header>

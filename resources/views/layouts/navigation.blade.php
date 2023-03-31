@@ -6,7 +6,7 @@
 
 
 
-<nav x-data="{ open: false }" class=" border-r border-brand-gray">
+<nav x-data="{ open: false }" class="fixed border-r border-brand-gray hidden lg:block">
     <!-- Primary Navigation Menu -->
 <div class="h-screen p-3 space-y-2 w-48 text-brand-black">
     <div class="flex justify-center mb-8 items-center">

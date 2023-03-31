@@ -6,3 +6,27 @@ body {
     background-color: #ffff;
     color: #292929;
 }
+
+@layer base {
+    [type="text"],
+    [type="email"],
+    [type="password"],
+    [type="number"],
+    [type="tel"],
+    [type="url"],
+    [type="date"],
+    [type="month"],
+    [type="week"],
+    [type="time"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="color"],
+    [type="search"],
+    [type="file"],
+    [type="radio"],
+    [multiple],
+    textarea,
+    select {
+        @apply block w-full caret-brand-black appearance-none rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-gray-500 focus:ring-gray-500;
+    }
+}
