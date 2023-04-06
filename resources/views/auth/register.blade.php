@@ -1,16 +1,16 @@
 <x-guest-layout>
     <x-auth-card>
 
-        <div className="flex flex-col items-start justify-start">
+        <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
+            <div class="inline-flex justify-center items-center">
                 
-              <a href={{url('/')}}>
-                <img src="/logo-black.png" class="mb-1 h-20 w-20"  alt="logo orientation.com" srcset="">
-              </a>
-            <h2 class="mt-8 text-lg font-semibold text-gray-900">
+            <x-application-logo/>
+            </div>
+            <h2 class="mt-4 text-lg font-semibold text-gray-900">
                 Créer un compte
             </h2>
             <p class="mt-2 text-sm text-gray-700">
-                Ou <a href="{{ route('login') }}" class="font-medium underline text-gray-600 hover:text-gray-900">
+                Ou <a href="{{ route('login') }}" class="font-medium underline text-blue-600 hover:text-blue-800 transition-colors ">
                     se connecter
                 </a>
                 
@@ -57,12 +57,12 @@
             </div>
 
             <div class="flex flex-col-reverse gap-2 items-center justify-end mt-8">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-blue-600 hover:text-blue-800 transition-colors" href="{{ route('login') }}">
                     {{ __('Déja enregistré?') }}
                 </a>
 
-                <x-button class="w-full rounded-full group border border-transparent bg-brand-black py-2 px-4 text-base font-semibold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" >
-                    {{ __("S'enregistrer") }} <span class="opacity-0 transition-[opacity,transform] duration-300 ease-in-out -translate-x-full group-hover:opacity-100 group-hover:translate-x-0 inline-flex ">&rarr;</span>
+                <x-button >
+                    {{ __("S'enregistrer") }}
                 </x-button>
             </div>
         </form>

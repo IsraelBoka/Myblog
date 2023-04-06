@@ -47,11 +47,11 @@
 
         </div>
         <div>
-            <h2 class="ml-4 font-bold text-xl lg:text-2xl ">
+            <h2 class="ml-4 font-bold text-xl p-2 lg:text-2xl">
                 Statistiques des blogs et leurs vues
             </h2>
-            <div>
-                <canvas id="chartLine" class="lg:w-96">
+            <div class="">
+                <canvas id="chartLine" class="  w-44 hover:border-brand-black duration-500 transition-all  border p-2 rounded m-2 lg:w-auto">
 
 
                 </canvas>
@@ -153,12 +153,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-  const labels = ["January", "February", "March", "April", "May", "June"];
+  const labels = ["Art1", "Art2 ", "Orientation au gratuit ", "Orientation au gratuit ", "Orientation au gratuit ", "Orientation au gratuit "];
   const data = {
     labels: labels,
     datasets: [
       {
-        label: "My First dataset",
+        label: "Vues",
         backgroundColor: "hsl(217, 57%, 51%)",
         borderColor: "hsl(217, 57%, 51%)",
         data: [0, 10, 5, 2, 20, 30, 45],

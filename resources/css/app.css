@@ -4,7 +4,7 @@
 
 body {
     background-color: #ffff;
-    color: #292929;
+    color: #000e38;
 }
 
 @layer base {
@@ -27,6 +27,15 @@ body {
     [multiple],
     textarea,
     select {
-        @apply block w-full caret-brand-black appearance-none rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-gray-500 focus:ring-gray-500;
+        @apply block w-full caret-brand-black appearance-none rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-blue-900 placeholder-blue-400 focus:border-blue-500 focus:ring-blue-500;
+    }
+}
+
+@layer components {
+    .categorie {
+        @apply p-2 z-10  text-sm lg:text-base border-dashed border-brand-black transition-all  rounded-3xl border-2  hover:rounded-xl;
+    }
+    .active {
+        @apply p-2 z-10 text-sm lg:text-base bg-brand-black text-white transition-all rounded-3xl hover:rounded-3xl;
     }
 }
