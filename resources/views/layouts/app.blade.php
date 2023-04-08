@@ -13,22 +13,25 @@
 
     </head>
     <body class="">
-        <div class="flex">
+        <div class="flex  ">
             @include('layouts.navigation')
-            <div class="flex flex-col ">
+            <div class="flex flex-col  mx-auto ">
                 
 
             <!-- Page Heading -->
             <header class="">
-                <div class="ml-4">
+                <div class="">
                     {{ $header }}
                 </div>
             </header>
 
             <!-- Page Content -->
-            <main class="">
+            <div class="flex items-center justify-center   mx-auto">
+                
+            <main class=" mx-auto  items-center flex justify-center ">
                 {{ $slot }}
             </main>
+            </div>
             </div>
         </div>
     </body>

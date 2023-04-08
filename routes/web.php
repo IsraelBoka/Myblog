@@ -31,6 +31,13 @@ Route::get('/dashboard', function () {
 
 
 
+Route::get('/form1', function () {
+    return view('form1');
+})->middleware(['web'])->name('form1');
+
+
+
+
 Route::get('/blog1', function () {
     return view("blog1");
 });
