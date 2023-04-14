@@ -12,27 +12,13 @@
         <script defer src="{{asset('js/app.js')}}"></script>
 
     </head>
-    <body class="">
-        <div class="flex  ">
+    <x-navbar-dashboard/>
+    <div class="flex pt-16 overflow-hidden  ">
             @include('layouts.navigation')
-            <div class="flex flex-col  mx-auto ">
+            <main id="main-content" class="relative w-full h-full overflow-y-auto 50 lg:ml-64 bg-gray-50">
+                <!-- Page Content -->
                 
-
-            <!-- Page Heading -->
-            <header class="">
-                <div class="">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <div class="flex items-center justify-center   mx-auto">
-                
-            <main class=" mx-auto  items-center flex justify-center ">
-                {{ $slot }}
+                    {{ $slot }}
             </main>
-            </div>
-            </div>
-        </div>
-    </body>
+    </div>
 </html>

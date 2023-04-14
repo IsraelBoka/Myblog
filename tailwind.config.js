@@ -7,6 +7,7 @@ module.exports = {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
+    darkMode: "class", // or 'media' or 'class'
 
     theme: {
         extend: {
@@ -71,5 +72,5 @@ module.exports = {
         },
     },
 
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [require("@tailwindcss/typography")],
 };
