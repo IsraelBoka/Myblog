@@ -33,12 +33,10 @@
     <img src="/images/image1.jpg" class=" lg:h-96 lg:w-full rounded-2xl object-cover " alt="">
 </div>
 
-<div class="mt-4">
-    
-    <p class="text-2xl lg:text-3xl mb-5 text-brand-black font-bold">
-        Sous-titre
-    </p>
     <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
+
+        {{-- start of wysiwyg content --}}
+
         <p class="lead">Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.</p>
         <p>By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you <em>really are</em> just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.</p>
         <p>We get lots of complaints about it actually, with people regularly asking us things like:</p>
@@ -228,6 +226,12 @@
         <p>Phew, with any luck we have styled the headings above this text and they look pretty good.</p>
         <p>Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.</p>
         <p>What I've written here is probably long enough, but adding this final sentence can't hurt.</p>
+
+        {{-- end of content --}}
+
+        {{-- FORM FOR COMMENTARY  --}}
+
+
     </div>
 
 
