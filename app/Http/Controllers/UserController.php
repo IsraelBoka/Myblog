@@ -10,7 +10,6 @@ class UserController
 {
     public function __invoke(Request $request)
     {
-        dd($request->ip());
         return view('users');
     }
 }

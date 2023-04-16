@@ -33,7 +33,7 @@
     <img src="/images/image1.jpg" class=" lg:h-96 lg:w-full rounded-2xl object-cover " alt="">
 </div>
 
-    <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
+    <div class="mt-8  prose prose-slate  lg:prose-lg">
 
         {{-- start of wysiwyg content --}}
 

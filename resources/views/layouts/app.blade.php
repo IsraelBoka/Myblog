@@ -11,6 +11,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script defer src="{{asset('js/app.js')}}"></script>
 
+
     </head>
     <x-navbar-dashboard/>
     <div class="flex pt-16 overflow-hidden  ">

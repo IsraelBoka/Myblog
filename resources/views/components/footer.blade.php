@@ -1,6 +1,6 @@
-<div class=" mx-auto max-w-6xl px-4 mt-12">
+<div class=" mx-auto max-w-6xl  mt-12">
         
-    <div class=" bg-black  text-white  grid grid-cols-2  rounded-t p-2">
+    <div class=" bg-black lg:px-4  text-white  grid grid-cols-2  lg:rounded-t p-2">
 
 <div class="flex flex-col justify-center items-center gap-2 ">
 <a href={{url('/')}} class="inline-flex flex-col items-center justify-center ">

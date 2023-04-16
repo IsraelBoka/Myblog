@@ -261,12 +261,12 @@ categories.forEach((categorie) => {
         Recevez nos actualités par mail et restez informé de nos nouveautés
     </p>
 
-<form action="https://lunarphp.us16.list-manage.com/subscribe/post?u=e98af2b51ce0476a77d7d0f59&amp;id=720dcc1445" method="post" name="mc-embedded-subscribe-form" target="_blank" class="mt-6">
-    <div class="max-w-lg mx-auto">
+<form action="" method="post" name="mc-embedded-subscribe-form" target="_blank" class="mt-6">
+    <div class="max-w-lg mx-auto ">
         <label class="sr-only" for="email">Email</label>
-        <div class="bg-[length:400%_400% relative animate-border rounded-lg bg-gradient-to-r to-brand-black from-brand-gray p-0.5 focus-within:ring">
-            <input class="w-full p-4 pr-32 font-medium border-none rounded-md border-brand-black bg-white text-brand-black placeholder-brand-black/50" id="email" type="email" name="EMAIL" required="" placeholder="entrez votre mail">
-            <button class="absolute top-1/2 right-[0.35rem] -translate-y-1/2 rounded bg-brand-black px-5 py-3 font-medium text-white transition">
+        <div class="bg-[length:400%_400% relative animate-border rounded-lg bg-gradient-to-r  from-brand-gray to-brand-black p-0.5 focus-within:ring">
+            <input class="w-full p-4 pr-32 text-lg font-medium border-none rounded-md border-brand-black bg-white text-brand-black placeholder-brand-black/50" id="email" type="email" name="EMAIL" required="" placeholder="entrez votre mail">
+            <button class="absolute top-1/2 right-[0.35rem] -translate-y-1/2 rounded-xl bg-brand-black px-5 py-3 font-medium text-white transition">
                 <span class="hidden sm:inline">S'inscrire</span>
                 <span class="sm:hidden">S'inscrire</span>
             </button>

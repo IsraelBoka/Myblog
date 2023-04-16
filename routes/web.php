@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MbtiController;
 
 
 /*
@@ -44,6 +45,9 @@ Route::get('/blog1', function () {
     return view("blog1");
 });
 
+
+Route::get('/mbti', [MbtiController::class, 'index'])->name('mbti.index');
+Route::post('/mbti/result', [MbtiController::class, 'result'])->name('mbti.result');
 
 Route::get('/users', UserController::class)->name("users");
 
