@@ -52,10 +52,10 @@
         <div class="font-bold relative text-center flex gap-4 flex-col items-center justify-center">
             <div class=" absolute animate-blob filter  -top-20 -right-4 opacity-70 blur-xl h-40 w-40  lg:h-72 lg:w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
             <div class=" absolute  top-0 animate-blob filter bottom-16  opacity-70 left-16 blur-xl  h-40 w-40   lg:h-72 lg:w-72 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
-            <h1 class="text-xl lg:text-3xl z-10  " id="hero-title">
+            <h1 class="text-2xl lg:text-3xl z-10 mt-10 lg:mt-0  " id="hero-title">
                 Passer un test pour votre enfant ?
             </h1>
-            <h2 class=" text-base lg:text-2xl lg:leading-relaxed font-medium z-10   " id="hero-description">
+            <h2 class=" text-xl lg:text-2xl lg:leading-relaxed font-medium z-10   " id="hero-description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam, quod.
             </h2>
                 <a href="/test" class="bg-white border-2 text-lg md:text-xl hover:scale-105 duration-150 transition-transform z-10 inline-flex  border-brand-black rounded-3xl p-1.5 md:p-2 ">Passer un test </a>
@@ -69,7 +69,7 @@
         <div class="flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-10  ">
             
         <h1 class="text-5xl  font-bold ">Blog </h1>
-        <div class="md:text-xl text-sm font-medium  ">
+        <div class="md:text-xl text-base font-medium  ">
             Apprenez à mieux connaitre votre enfant et à l'aider dans son orientation scolaire
         </div>
         </div>
@@ -252,10 +252,33 @@ categories.forEach((categorie) => {
 
           </script>
 
+<div class=" mx-auto max-w-6xl px-4 lg:px-8 mt-24">
+
+    <h1 class="text-center text-2xl font-bold p-2 ">
+        Vous souhaitez recevoir nos actualités ?
+    </h1>
+    <p class="text-center text-xl font-medium p-2 ">
+        Recevez nos actualités par mail et restez informé de nos nouveautés
+    </p>
+
+<form action="https://lunarphp.us16.list-manage.com/subscribe/post?u=e98af2b51ce0476a77d7d0f59&amp;id=720dcc1445" method="post" name="mc-embedded-subscribe-form" target="_blank" class="mt-6">
+    <div class="max-w-lg mx-auto">
+        <label class="sr-only" for="email">Email</label>
+        <div class="bg-[length:400%_400% relative animate-border rounded-lg bg-gradient-to-r to-brand-black from-brand-gray p-0.5 focus-within:ring">
+            <input class="w-full p-4 pr-32 font-medium border-none rounded-md border-brand-black bg-white text-brand-black placeholder-brand-black/50" id="email" type="email" name="EMAIL" required="" placeholder="entrez votre mail">
+            <button class="absolute top-1/2 right-[0.35rem] -translate-y-1/2 rounded bg-brand-black px-5 py-3 font-medium text-white transition">
+                <span class="hidden sm:inline">S'inscrire</span>
+                <span class="sm:hidden">S'inscrire</span>
+            </button>
+        </div>
+    </div>
+</form>
+
+</div>
 
 
-          
 <x-footer/>
+
    
 
 

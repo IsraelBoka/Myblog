@@ -4,29 +4,29 @@
 <div class="px-4 pt-6">
     <div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
       <!-- Main widget -->
-      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 ">
         <div class="flex items-center justify-between mb-4">
           <div class="flex-shrink-0">
-            <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">
+            <span class="text-xl font-bold leading-none text-brand-black sm:text-2xl ">
               120
             </span>
-            <h3 class="text-base font-light text-gray-500 dark:text-gray-400">
+            <h3 class="text-base font-light text-brand-gray ">
               Nombre d&apos;utilisateurs
             </h3>
           </div>
         </div>
         <!-- Card Footer -->
-        <div class="flex items-center justify-between pt-3 mt-4 border-t border-gray-200 sm:pt-6 dark:border-gray-700">
+        <div class="flex items-center justify-between pt-3 mt-4 border-t border-gray-200 sm:pt-6 ">
           <div>
-            <a href="" class="underline inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="" class="underline inline-flex items-center p-2 text-sm font-medium text-center text-brand-gray rounded-lg hover:text-brand-black ">
               Voir les utilisateurs
             </a>
           </div>
         </div>
       </div>
       <!--Tabs widget -->
-      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-        <h3 class="flex items-center mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm  sm:p-6 ">
+        <h3 class="flex items-center mb-4 text-lg font-semibold text-brand-black ">
           Statistiques du mois
         </h3>
         <div>
@@ -35,22 +35,22 @@
       </div>
     </div>
     <div class="grid w-full grid-cols-1 gap-4 mt-4 xl:grid-cols-2 2xl:grid-cols-3">
-      <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex  sm:p-6 ">
         <div class="w-full">
-          <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
+          <h3 class="text-base font-normal text-brand-gray ">
             Total article
           </h3>
-          <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white">20</span>
+          <span class="text-2xl font-bold leading-none text-brand-black sm:text-3xl ">20</span>
 
         </div>
         <div class="w-full" id="new-products-chart"></div>
       </div>
-      <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex  sm:p-6 ">
         <div class="w-full">
-          <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
+          <h3 class="text-base font-normal text-brand-gray ">
             Total tests
           </h3>
-          <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white">10</span>
+          <span class="text-2xl font-bold leading-none text-brand-black sm:text-3xl ">10</span>
         </div>
       </div>
     </div>
