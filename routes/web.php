@@ -45,6 +45,14 @@ Route::get('/blog1', function () {
     return view("blog1");
 });
 
+Route::get('a-propos', function () {
+    return view("a-propos");
+});
+
+Route::get('contact', function () {
+    return view("contact");
+});
+
 
 Route::get('/mbti', [MbtiController::class, 'index'])->name('mbti.index');
 Route::post('/mbti/result', [MbtiController::class, 'result'])->name('mbti.result');
