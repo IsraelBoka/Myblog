@@ -12,18 +12,13 @@
         </div>
             
         <div class="hidden [&>li]:uppercase py-0.5 px-0.5  lg:flex gap-5 items-center">
-
-        
-
             <li>
-                
                 <a class='group text-brand-black transition-all duration-300 ease-in-out' href='{{url('mbti')}}'>
                     <span class='py-1 bg-left-bottom bg-gradient-to-r from-brand-black to-brand-black bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] transition-all duration-500 ease-out'>
                         Passer un test
                     </span>
                 </a>
             </li>
-
             <li>
                 
                 <a class='group text-brand-black transition-all duration-300 ease-in-out' href='{{url('a-propos')}}'>
@@ -32,9 +27,7 @@
                     </span>
                 </a>
             </li>
-
             <li>
-                
                 <a class='group text-brand-black transition-all duration-300 ease-in-out' href='{{url('contact')}}'>
                     <span class='py-1 bg-left-bottom bg-gradient-to-r from-brand-black to-brand-black bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] transition-all duration-500 ease-out'>
                         Contact
@@ -42,19 +35,15 @@
                 </a>
             </li>
 
-            
-        
-            
         <div class="hidden lg:flex">
                     
             @if (Route::has('login'))
-            @auth
-                <a href="{{ url('/dashboard') }}" class="bg-brand-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}" class="bg-brand-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ease-in-out ">Se connecter </a>
-
-            @endauth
-    @endif
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="bg-brand-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="bg-brand-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ease-in-out ">Se connecter </a>
+                @endauth
+            @endif
                 </div>
         </div>
 
@@ -90,10 +79,9 @@
             <a href="{{url('contact')}}" class="font-medium block px-1.5 py-2 text-base text-black hover:bg-brand-black hover:text-white transition-colors duration-150 rounded">Contact</a>
                         @if (Route::has('login'))
             @auth
-                <a href="{{ url('/dashboard') }}" class="text-center font-medium block mt-2 p-1 text-base hover:bg-brand-gray hover:text-white bg-brand-black text-white transition-colors duration-150 rounded-3xl ">Dashboard</a>
+                <a href="{{ url('/dashboard') }}" class="text-center font-medium block mt-2 p-1 text-base hover:bg-opacity-80 hover:text-white bg-brand-black text-white transition-colors duration-150 rounded-3xl ">Dashboard</a>
             @else
-                <a href="{{ route('login') }}" class="text-center font-medium block mt-2 p-1 text-base hover:bg-brand-gray hover:text-white bg-brand-black text-white transition-colors duration-150 rounded-3xl ">Se connecter </a>
-
+                <a href="{{ route('login') }}" class="text-center font-medium block mt-2 p-1 text-base hover:bg-opacity-80 hover:text-white bg-brand-black text-white transition-colors duration-150 rounded-3xl ">Se connecter </a>
             @endauth
     @endif
         </div>

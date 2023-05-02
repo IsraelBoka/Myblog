@@ -54,6 +54,11 @@ Route::get('contact', function () {
 });
 
 
+Route::get('passer-un-test', function () {
+    return view("passer-un-test");
+});
+
+
 Route::get('/mbti', [MbtiController::class, 'index'])->name('mbti.index');
 Route::post('/mbti/result', [MbtiController::class, 'result'])->name('mbti.result');
 

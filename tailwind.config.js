@@ -19,6 +19,16 @@ module.exports = {
                 "brand-gray": "#6a6f7a",
             },
             keyframes: {
+                "card-rotate": {
+                    "0%": {
+                        transform: "rotateX(0deg) rotateY(0deg)",
+                    },
+                    "100%": {
+                        transform:
+                            "rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))",
+                    },
+                },
+
                 blob: {
                     "0%": {
                         transform: "scale(1) ",
@@ -68,6 +78,8 @@ module.exports = {
                 backgroundslide: "backgroundslide 20s ease infinite",
                 "fade-in": "fade-in 1s ease-in-out",
                 "fade-out": "fade-out 1s ease-in-out",
+                "handle-mouse-move":
+                    "handle-mouse-move var(--mouse-move-x) var(--mouse-move-y) infinite",
             },
         },
     },

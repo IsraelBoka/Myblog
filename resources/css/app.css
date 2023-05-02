@@ -38,4 +38,7 @@ body {
     .active {
         @apply p-2 z-10 text-sm lg:text-base bg-brand-black text-white transition-all rounded-3xl hover:rounded-3xl;
     }
+    .card {
+        @apply bg-white;
+    }
 }
