@@ -21,7 +21,13 @@
 
     <x-navbar />
     <div class="  mx-auto max-w-6xl px-4 lg:px-8 mt-8">
-        <div class="max-w-2xl mx-auto pt-4 lg:pt-12">
+        <div class="max-w-2xl mx-auto pt-4 lg:pt-12 relative">
+            <div
+                class="absolute hidden lg:block    animate-blob   filter -top-16 right-36   opacity-70 blur-xl  h-60 w-60 bg-purple-300 mix-blend-multiply  rounded-full">
+            </div>
+            <div
+                class="absolute  hidden lg:block animate-blob   filter  top-0 right-8 opacity-70 blur-xl  h-20 w-20 bg-yellow-300 mix-blend-multiply  rounded-full">
+            </div>
 
             <h1 class="text-5xl font-bold text-center">
                 A propos
