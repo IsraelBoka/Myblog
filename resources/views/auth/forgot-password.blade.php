@@ -1,13 +1,15 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+                <x-application-logo />
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4 text-base text-left  text-gray-600 py-12">
+            
+            {{-- 
+                
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+                
+                translate in french --}}
+            {{ __('Vous avez oublié votre mot de passe? Pas de problème. Indiquez-nous simplement votre adresse e-mail et nous vous enverrons un lien de réinitialisation du mot de passe qui vous permettra d\'en choisir un nouveau.') }}
         </div>
 
         <!-- Session Status -->
@@ -27,8 +29,12 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
+                <x-button class="w-full rounded-full group border border-transparent bg-brand-black py-2 px-4 text-base font-semibold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" >
+                    {{-- 
                     {{ __('Email Password Reset Link') }}
+                        
+                        in french --}}
+                    {{ __('Envoyer le lien') }}
                 </x-button>
             </div>
         </form>

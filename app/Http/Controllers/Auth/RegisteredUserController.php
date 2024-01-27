@@ -18,11 +18,14 @@ class RegisteredUserController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create2()
     {
         return view('auth.register');
     }
-
+    public function create(Request $request)
+    {
+        return view('auth.register');
+    }
     /**
      * Handle an incoming registration request.
      *

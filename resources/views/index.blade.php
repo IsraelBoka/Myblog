@@ -3,260 +3,314 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-        
+        <meta name="description" content="Blog - Orientation-apprentissage orientation abidjan">
+        <title>Orientation & Apprentissage</title>
+        <meta name="google-site-verification" content="gHeNLRYZ2XmNOIdu7qpPjj9AY26HBxoSg1fsdNbDIpE" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script defer src="{{asset('js/app.js')}}"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8799500731150014"
+     crossorigin="anonymous"></script>
 
     </head>
     
         <!-- Navbar -->
+<body class=" selection:bg-brand-black selection:text-white">
+    
 
-    <nav class="mx-auto max-w-6xl px-4 lg:px-8 mt-4">
-        <ul class=" flex items-center  text-xl gap-5 font-medium ">
-            <li class="cursor-pointer">Orientation.com</li>
-            <div class="py-0.5 px-0.5 rounded-full mx-auto border-2 border-black bg-white flex gap-5 [&>li]:transition-colors [&>li]:duration-300 [&>li]:cursor-pointer [&>li]:rounded-full [&>li]:p-2 hover:[&>li]:bg-black  hover:[&>li]:text-white">
-                <li>Passer un test </li>
-                <li>
-                    A propos 
-                </li>
-                <li>
-                    Contact
-                </li>
-            </div>
-            @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}" class="bg-black text-xl  py-2 px-4 transition-all rounded-3xl hover:rounded-2xl  duration-200 text-white ">Se connecter </a>
-
-                @endauth
-        @endif
-        </ul>
-    </nav>
-
+    <x-navbar/>
+    
     <!-- Div annonce  -->
-
+<!--
     <div class="flex items-center justify-center mt-6 ">
         <div class="relative">
             
-        {{-- <div class="absolute bg-gradient-to-r from-pink-500 to-blue-500 blur rounded-full inset-0 "></div> --}}
-        <a class=" duration-200 transition-transform relative cursor-pointer rounded-full px-2 py-0.5 font-medium bg-[#e5e5e5]  text-black ">
+        <div class="absolute bg-gradient-to-r from-purple-500 to-yellow-500 blur rounded-full inset-0 "></div>
+        <a class=" duration-200 transition-transform relative cursor-pointer rounded-full px-2 py-0.5 font-medium bg-[#f2f2f2] border border-brand-black  text-brand-black ">
             Conférence sur l'orientation scolaire ce samedi 12/12/2020
         </a>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Body index page  -->
 
 
-    <div class="grid lg:grid-cols-2  mx-auto max-w-6xl px-4 lg:px-8 mt-12">
-        <div class="">
-            <img src="/image1.jpg" alt="image1" class="rounded-md">
+    <div class="grid  relative   lg:grid-cols-2  mx-auto max-w-6xl px-4 lg:px-8 mt-12 ">
+        <div class="relative">
+        <div class="carousel">
+            <div class="carousel-container">
+              <div class="carousel-item ">
+                <img src="/images/image1.jpg"  class="rounded-xl object-cover  lg:h-96" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/image2.jpg"  class="rounded-xl object-cover  lg:h-96" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/image3.jpg"  class="rounded-xl  object-cover lg:h-96" alt="Image 3">
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="font-bold text-center flex gap-4 flex-col">
-            <h1 class="text-xl ">
+        <div class="font-bold relative text-center flex gap-4 flex-col items-center justify-center">
+            <div class=" absolute animate-blob filter  -top-20 -right-4 opacity-70 blur-xl h-40 w-40  lg:h-72 lg:w-72 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+            <div class=" absolute  top-0 animate-blob filter bottom-16  opacity-70 left-16 blur-xl  h-40 w-40   lg:h-72 lg:w-72 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <h1 class="text-xl lg:text-3xl z-10  " id="hero-title">
                 Passer un test pour votre enfant ?
             </h1>
-            <h2 class="text-md font-medium ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br class="hidden md:block" /> Quisquam, quod.
+            <h2 class=" text-base lg:text-2xl lg:leading-relaxed font-medium z-10   " id="hero-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam, quod.
             </h2>
-            <div class="hover:scale-105 duration-150 transition-transform">
-                <a href="/test" class="bg-white border-2 text-xl   border-black rounded-3xl p-2 ">Passer un test </a>
-
-            </div>
-        </div>
+                <a href="/test" class="bg-white border-2 text-lg md:text-xl hover:scale-105 duration-150 transition-transform z-10 inline-flex  border-brand-black rounded-3xl p-1.5 md:p-2 ">Passer un test </a>
+        </div> 
 
     </div>
 
     <!-- Section Blogs -->
 
     <div class=" mx-auto max-w-6xl px-4 lg:px-8 mt-12">
-        <div class="flex items-end gap-10  ">
+        <div class="flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-10  ">
             
         <h1 class="text-5xl  font-bold ">Blog </h1>
-        <div class="text-xl font-medium  ">
+        <div class="md:text-xl text-sm font-medium  ">
             Apprenez à mieux connaitre votre enfant et à l'aider dans son orientation scolaire
         </div>
         </div>
 
         <!-- Trier les articles  -->
 
-        <div class="flex gap-2 mt-5">
-            <button class="p-2 bg-black text-white rounded-full ">Toutes</button>
-            <button class="p-2  border-dashed border-black transition-all  rounded-3xl border-2 hover:rounded-xl">Scolaire</button>
-            <button class="p-2  border-dashed border-black transition-all  rounded-3xl border-2 hover:rounded-xl">Catégorie 3</button>
-            <button class="p-2  border-dashed border-black  transition-all rounded-3xl border-2 hover:rounded-xl">Catégorie 4</button>
+        <div class="flex flex-wrap gap-2 mt-5">
+            <button class="categorie active" data-categorie="all">Toutes</button>
+            @foreach ($Categoryarticle as $Categoryarticles )
+            <button class="categorie " data-categorie="{{$Categoryarticles->LibelleCategoryArticle}}">{{$Categoryarticles->LibelleCategoryArticle}}</button>
+            @endforeach
         </div>
 
 
         <!-- les articles -->
         <div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 relative lg:grid-cols-3 gap-5 mt-10">                
+            <div class="absolute hidden lg:block    animate-blob   filter -top-16 right-36   opacity-70 blur-xl  h-60 w-60 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute hidden lg:block animate-blob   filter  -top-16 left-36 opacity-70 blur-xl  h-60 w-60 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute  hidden lg:block animate-blob   filter  top-0 right-8 opacity-70 blur-xl  h-20 w-20 bg-yellow-300 mix-blend-multiply  rounded-full"></div>
+            <div class="absolute  hidden lg:block animate-blob   filter  top-0 left-4 opacity-70 blur-xl  h-20 w-20 bg-purple-300 mix-blend-multiply  rounded-full"></div>
+           
+
+
+            @foreach($Articles as $article)
+            <a href={{ route('articles.show', $article->slug) }} data-categorie="{{$article->LibelleCategoryArticle}}" class="hover:scale-[1.01] duration-300 transition-transform article z-10  shadow-2xl bg-white rounded-2xl py-4 px-1 border-2 border-brand-black">
+        
+                <img src="{{URL::asset('fichier/img/'.$article->Image)}}" class="rounded-2xl lg:h-64 object-cover" alt="">
+                <span class="text-xs font-medium text-[#6a6f7a] ">
+                    {{$article->created_at}}
+                    
+                </span>
+                <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">{{$article->Titre}}</h1>
+                <p class="text-[#6a6f7a] font-medium">{{$article->Description}}</p>
+            
+                <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
+                    <div class="text-end uppercase text-xs font-medium">
+                        {{$article->LibelleCategoryArticle}}
+                        
+                    </div>
+                    <div class="text-end uppercase text-xs font-medium">
+                        {{$article->auteur}}
+                    </div>
+                </div>
+            </a>
+            
+@endforeach
+
+            
    <!-- foreach pour les articles -->
+{{-- @foreach ($articles as $article) 
+    
 
 
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
+<a href={{ route('articles.show', $article->slug) }} data-categorie="Scolaire" class="hover:scale-[1.01] duration-300 transition-transform article z-10  shadow-2xl bg-white rounded-2xl py-4 px-1 border-2 border-brand-black">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    <img src="{{URL::asset('fichier/img/'.$article->Image)}}" class="rounded-2xl lg:h-64 object-cover" alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
-        Mardi , 25 Novembre 2020 . 5 min de lecture
+        {{$article->created_at}}
+        
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-[#292929] ">{{$article->Title}}</h1>
+    <p class="text-[#6a6f7a] font-medium">{{$article->Text}}</p>
+
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
+        <div class="text-end uppercase text-xs font-medium">
+            {{$article->LibelleCategoryArticle}}
+            
+        </div>
+        <div class="text-end uppercase text-xs font-medium">
+            {{$article->Auteur}}
+        </div>
+    </div>
+</a>
+
+@endforeach --}}
+   {{-- <!-- foreach pour les articles -->
+
+
+<a href={{url('blog1')}} data-categorie="Scolaire" class="  hover:scale-[1.01] duration-300 transition-transform article z-10  shadow-2xl bg-white rounded-2xl py-4 px-1 border-2 border-brand-black">
+        
+    <img src="/images/image2.jpg" class="rounded-2xl lg:h-64 object-cover " alt="">
+    <span class="text-xs font-medium text-[#6a6f7a] ">
+        Mardi , 25 Novembre 2020 · 5 min de lecture
+    </span>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-brand-black ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
             #Scolaire 
         </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie2 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie3 
-        </div>
-    </div>
-</div>
-
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
+    </div>
+</a>
+
+
+<a href={{url('blog1')}}   data-categorie="Professionnel" class=" hover:scale-[1.01] duration-300 article z-10 transition-transform cursor-pointer shadow-2xl bg-white rounded-2xl py-4 px-1 border-2 border-brand-black">
+        
+    <img src="/images/image1.jpg" class="rounded-2xl lg:h-64 object-cover " alt="">
     <span class="text-xs font-medium text-[#6a6f7a] ">
-        Mardi , 25 Novembre 2020 . 5 min de lecture
+        Mardi , 25 Novembre 2020 · 5 min de lecture
     </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
+    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-brand-black ">Titre de l'article </h1>
     <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
 
-    <div class="flex gap-2 justify-end mt-2 ">
+    <div class="flex gap-2 justify-end mt-2 flex-wrap  ">
         <div class="text-end uppercase text-xs font-medium">
-            #Scolaire 
+            #Professionnel 
         </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie2 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie3 
-        </div>
-    </div>
-</div>
-
-
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
         
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
-    <span class="text-xs font-medium text-[#6a6f7a] ">
-        Mardi , 25 Novembre 2020 . 5 min de lecture
-    </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
-    <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-
-    <div class="flex gap-2 justify-end mt-2 ">
-        <div class="text-end uppercase text-xs font-medium">
-            #Scolaire 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie2 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie3 
-        </div>
     </div>
-</div>
-
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
-        
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
-    <span class="text-xs font-medium text-[#6a6f7a] ">
-        Mardi , 25 Novembre 2020 . 5 min de lecture
-    </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
-    <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-
-    <div class="flex gap-2 justify-end mt-2 ">
-        <div class="text-end uppercase text-xs font-medium">
-            #Scolaire 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie2 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie3 
-        </div>
-    </div>
-</div>
-
-<div class="bg-white rounded-2xl py-4 px-1 border-2 border-black">
-        
-    <img src="/image1.jpg" class="rounded-2xl " alt="">
-    <span class="text-xs font-medium text-[#6a6f7a] ">
-        Mardi , 25 Novembre 2020 . 5 min de lecture
-    </span>
-    <h1 class="text-center text-xl font-bold border-t-2 mt-2 border-dashed border-black ">Titre de l'article </h1>
-    <p class="text-[#6a6f7a] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-
-    <div class="flex gap-2 justify-end mt-2 ">
-        <div class="text-end uppercase text-xs font-medium">
-            #Scolaire 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie2 
-        </div>
-        <div class="text-end uppercase text-xs font-medium">
-            #Catégorie3 
-        </div>
-    </div>
-</div>
+</a> --}}
 
 <!-- enforeach -->
             </div>
+            
+<h1 class="no-articles w-full text-2xl font-bold text-center py-16   hidden">
+    Aucun article correspondant à votre recherche
+</h1>
         </div>
     </div>  
 
 
     <!-- footer --> 
 
-    <div class=" mx-auto max-w-6xl px-4 lg:px-8 mt-12 mb-4">
-        <div class=" bg-black rounded-md text-white p-2 flex items-center justify-between ">
-            <div>
-                
-            <span class="text-xl font-bold w-1/2">
-                Orientation.com
-            </span>
 
-            <p class="text-center text-[#747675]">Nous contacter ? </p>
-            <p class="text-center ">
-                <a href="mailto:@mail.com" class="text-[#747675] underline-offset-1
-                underline text-base font-medium hover:text-white transition-colors duration-150">
-                    @mail.com
-                </a>
-            </p>
+          <style>
+            .carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
-            </div>
-            <div class="text-[#747675] text-base font-medium w-1/2 flex flex-col gap-5 justify-center items-center">
-                <p class="hover:text-white  transition-colors duration-150">
-                    Notre but est de vous aider à trouver votre voie et à vous <br class="hidden md:block " /> accompagner  dans votre projet d'orientation.
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-                </p>
-                
-            <ul class="flex gap-2 justify-center [&>li]:underline">
-                <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">Accueil</a>
-                </li>
-                <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">A propos</a>
-                </li>
-                <li>
-                    <a href="" class="text-[#747675] text-base font-medium hover:text-white transition-colors duration-150">Contact</a>
-                </li>
-            </ul>
+.carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+}
 
-            </div>
+.carousel-item img {
+  width: 100%;
+}
+
+          </style>
+
+          <script>
+            const carouselContainer = document.querySelector('.carousel-container');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+// change the innerhtml of the herotitle and herodescription headers at the same time as the images changes
+const heroTitle = document.querySelector('#hero-title');
+const heroDescription = document.querySelector('#hero-description');
+
+const heroTitles = [
+    'Passer un test pour votre enfant ',
+    "Passer un test pour votre étudiant ",
+    'Passer un test pour votre enfant en difficulté ',
+];
+
+const heroDescriptions = [
+    'Description pour votre enfant ',
+    "Description pour votre étudiant ",
+    'Description pour votre enfant en difficulté',
+];
 
 
-        </div>
-    </div>
+let currentIndex = 0;
+
+function moveCarousel() {
+  currentIndex++;
+  if (currentIndex >= carouselItems.length) {
+    currentIndex = 0;
+  }
+  carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    heroTitle.innerHTML = heroTitles[currentIndex];
+    heroDescription.innerHTML = heroDescriptions[currentIndex];
+    
+}
+
+const interval = setInterval(moveCarousel, 5000);
+
+
+// filter categories when i click on the categorie button
+const categories = document.querySelectorAll('.categorie');
+const articles = document.querySelectorAll('.article');
+
+categories.forEach((categorie) => {
+    categorie.addEventListener('click', () => {
+        // remove the active class from all the categories
+        categories.forEach((categorie) => {
+            categorie.classList.remove('active');
+        });
+        // add the active class to the categorie that i clicked on
+        categorie.classList.add('active');
+        // filter the articles
+        const categorieName = categorie.getAttribute('data-categorie');
+        articles.forEach((article) => {
+
+            const articleCategorie = article.getAttribute('data-categorie');
+            if (categorieName === articleCategorie || categorieName === 'all') {
+                article.style.display = 'block';
+                article.classList.add('animate-fade-in');
+            } else {
+                article.style.display = 'none';
+                article.classList.remove('animate-fade-in');
+                article.classList.add('animate-fade-out');
+                setTimeout(() => {
+                    article.classList.remove('animate-fade-out');
+                }, 500);
+            }
+
+        });
+
+        const numArticles = document.querySelectorAll('.article[data-categorie="' + categorieName + '"]').length;
+        if (numArticles === 0 && categorieName !== 'all') {
+            document.querySelector('.no-articles').classList.remove('hidden');
+        } else {
+            document.querySelector('.no-articles').classList.add('hidden');
+        }
+
+
+    });
+});
+
+
+
+
+          </script>
+
+          
+<x-footer/>
+   
 
 
     <!--
@@ -282,4 +336,10 @@
                 </div>
             @endif -->
 
+    
+
+            </body>
+  
+
 </html>
+

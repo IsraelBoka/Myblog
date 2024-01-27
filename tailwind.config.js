@@ -13,6 +13,61 @@ module.exports = {
             fontFamily: {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                "brand-black": "#000E38",
+                "brand-gray": "#6a6f7a",
+            },
+            keyframes: {
+                blob: {
+                    "0%": {
+                        transform: "scale(1) ",
+                    },
+                    "33%": {
+                        transform:
+                            " translateY(100px ) translateX(-50px )  scale(1.1)",
+                    },
+                    "66%": {
+                        transform:
+                            "  translateY(200px ) translateX(-70px ) scale(0.9)   ",
+                    },
+                    "100%": {
+                        transform: "scale(1) ",
+                    },
+                },
+                "fade-in": {
+                    "0%": {
+                        opacity: "0",
+                    },
+                    "100%": {
+                        opacity: "1",
+                    },
+                },
+                "fade-out": {
+                    "0%": {
+                        opacity: "1",
+                    },
+                    "100%": {
+                        opacity: "0",
+                    },
+                },
+                backgroundslide: {
+                    "0%": {
+                        backgroundPosition: "0% 50%",
+                    },
+                    "50%": {
+                        backgroundPosition: "100% 50%",
+                    },
+                    "100%": {
+                        backgroundPosition: "0% 50%",
+                    },
+                },
+            },
+            animation: {
+                blob: "blob 7s infinite ",
+                backgroundslide: "backgroundslide 20s ease infinite",
+                "fade-in": "fade-in 1s ease-in-out",
+                "fade-out": "fade-out 1s ease-in-out",
+            },
         },
     },
 

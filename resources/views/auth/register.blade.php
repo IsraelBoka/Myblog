@@ -1,20 +1,31 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+
+        <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
+            <div class="inline-flex justify-center items-center">
+                
+            <x-application-logo/>
+            </div>
+            <h2 class="mt-4 text-lg font-semibold text-gray-900">
+                Créer un compte
+            </h2>
+            <p class="mt-2 text-sm text-gray-700">
+                Ou <a href="{{ route('login') }}" class="font-medium underline text-blue-600 hover:text-blue-800 transition-colors ">
+                    se connecter
+                </a>
+                
+            </p>
+          </div>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" class="mt-8">
             @csrf
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="name" :value="__('Nom')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
@@ -28,7 +39,7 @@
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('Mot de passe')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -38,20 +49,20 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" :value="__('Confirmer le mot de passe')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" required />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+            <div class="flex flex-col-reverse gap-2 items-center justify-end mt-8">
+                <a class="underline text-sm text-blue-600 hover:text-blue-800 transition-colors" href="{{ route('login') }}">
+                    {{ __('Déja enregistré?') }}
                 </a>
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
+                <x-button >
+                    {{ __("S'enregistrer") }}
                 </x-button>
             </div>
         </form>
